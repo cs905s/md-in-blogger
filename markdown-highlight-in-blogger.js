@@ -4,11 +4,19 @@
 // Copyright (c) 2017 Divya van Mahajan
 //
 // Redistributable under a BSD-style open source license.
-// Documentation: http://js-react.blogger.com/
+// Documentation: https://github.com/cs905s/md-in-blogger
 //
 
 // namespace
 var MarkdownHighlightInBlogger = {};
+// From http://erlend.oftedal.no/blog/?blogid=14
+MarkdownHighlightInBlogger.unescapeHTML = function (html) {
+  var htmlNode = document.createElement("DIV");
+  htmlNode.innerHTML = html;
+  if(htmlNode.innerText !== undefined)
+    return htmlNode.innerText; // IE
+  return htmlNode.textContent; // FF
+};
 
 MarkdownHighlightInBlogger.convertMD = function () {
   try {
@@ -19,6 +27,7 @@ MarkdownHighlightInBlogger.convertMD = function () {
     var converter = new showdown.Converter({});
     converter.setFlavor('github');
     $('pre.markdown').each(function (i, block) {
+      //var rawtext = MarkdownHighlightInBlogger.unescapeHTML(block.innerText);
       var rawtext = block.innerText;
       var md_html = converter.makeHtml(rawtext);
       var md = $(md_html); //.css('border','3px solid blue');
