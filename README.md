@@ -7,6 +7,8 @@ I found [Francis's blog](http://blog.chukhang.com/2011/09/markdown-in-blogger.ht
 
 jQuery had the nice bonus of cleaning up the previous code by abstracting away the DOM manipulation.
 
+**Caveat - your post shows up as Markdown in RSS feeds.**
+
 ## Adding markdown to your Blogger
 
    1. Open your template, by clicking the "Template" menu item. This displays the current template. Click Edit to modify the template. At the top of your template, add the following tags just before the &lt;/head&gt; tag.
@@ -43,7 +45,7 @@ jQuery had the nice bonus of cleaning up the previous code by abstracting away t
 
    6. Save your post. Preview or Publish the post.
    7. Now go and start [mastering Markdown at Github](https://guides.github.com/features/mastering-markdown/)
-
+   8. If you don't have a Markdown editor, use [StackEdit](https://stackedit.io/editor) for a browser Markdown editor.
 ## How it works.
 
    1. Finds `pre` elements marked with `class='markdown'` with jQuery.  
