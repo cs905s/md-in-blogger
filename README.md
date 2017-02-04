@@ -41,7 +41,7 @@ jQuery had the nice bonus of cleaning up the previous code by abstracting away t
 ```
    5. Any HTML **pre** tags with the class **markdown** are converted by showdown. After this any HTML code tags in the generated HTML are highlighted by highlightJS. 
 
-   6. Remember to escape your &amp; with &amp;amp;, < with &lt; and > with &gt;.
+   6. Remember to escape your &amp; with &amp;amp;, < with &amp;lt; and > with &amp;gt;.
 
    6. Save your post. Preview or Publish the post.
    7. Now go and start [mastering Markdown at Github](https://guides.github.com/features/mastering-markdown/)
